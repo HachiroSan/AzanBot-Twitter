@@ -7,19 +7,23 @@ import twitter
 logging.basicConfig(filename='debug.log', level=logging.DEBUG,
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
-_update = 0
-
 url = 'https://www.e-solat.gov.my/index.php?r=esolatApi/xmlfeed&zon={}'.format(twitter.zone_code)
 
+_update = 0     # Log update interval
+_notification = ['Subuh', 'Zohor', 'Asar', 'Maghrib', 'Isyak']  # Default notification
+
 def initialize():
+    list = ', '.join(_notification)
     print('[AzanBot] Running for the first time')
+    print('[INFO] Notification is enabled for reminder:', list)
     logging.debug('Running for the first time')
     update_prayer()
     initialize.__code__ = (lambda: None).__code__
 
 def notify(prayer):
     t = time.strftime("[%I:%M %p]")
-    print('{} Sudah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.'.format(t, prayer))
+    if prayer in _notification:
+        print('{} Sudah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.'.format(t, prayer))
 
 def update_prayer():
     global _update
@@ -31,7 +35,7 @@ def update_prayer():
         print('[AzanBot] Updating praying time')
         logging.debug('Updating praying time')
     schedule.clear()
-    schedule.every().day.at("21:44").do(update_prayer) 
+    schedule.every().day.at("00:00").do(update_prayer) 
     _update += 1
 
     try:
