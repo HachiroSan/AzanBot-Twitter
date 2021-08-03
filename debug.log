@@ -1,0 +1,314 @@
+2021-08-03 20:23:08,301:DEBUG:Running for the first time
+2021-08-03 20:23:08,301:DEBUG:Updating praying time
+2021-08-03 20:23:08,301:DEBUG:Deleting *all* jobs
+2021-08-03 20:23:08,304:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:23:08,797:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=PHG02 HTTP/1.1" 200 521
+2021-08-03 20:23:08,802:DEBUG:Fetched data succesfully
+2021-08-03 20:23:26,511:DEBUG:Running for the first time
+2021-08-03 20:23:26,512:DEBUG:Updating praying time
+2021-08-03 20:23:26,512:DEBUG:Deleting *all* jobs
+2021-08-03 20:23:26,514:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:23:26,803:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=PHG02 HTTP/1.1" 200 1769
+2021-08-03 20:23:26,805:DEBUG:Fetched data succesfully
+2021-08-03 20:35:00,382:DEBUG:Running job Job(interval=1, unit=days, do=notify, args=(), kwargs={'prayer': 'Isyak'})
+2021-08-03 20:50:33,101:DEBUG:PARAMS: {'status': b'Skynet tookover again!'}
+2021-08-03 20:50:33,102:DEBUG:Signing request <PreparedRequest [POST]> using client <Client client_key=sV6Qpbhw7tlU9O1Ft5dcuaKlW, client_secret=****, resource_owner_key=849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2021-08-03 20:50:33,102:DEBUG:Including body in call to sign: False
+2021-08-03 20:50:33,102:DEBUG:Collected params: [('status', 'Skynet tookover again!'), ('oauth_nonce', '122358228344510180601627995033'), ('oauth_timestamp', '1627995033'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'sV6Qpbhw7tlU9O1Ft5dcuaKlW'), ('oauth_token', '849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr')]
+2021-08-03 20:50:33,102:DEBUG:Normalized params: oauth_consumer_key=sV6Qpbhw7tlU9O1Ft5dcuaKlW&oauth_nonce=122358228344510180601627995033&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1627995033&oauth_token=849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr&oauth_version=1.0&status=Skynet%20tookover%20again%21
+2021-08-03 20:50:33,103:DEBUG:Normalized URI: https://api.twitter.com/1.1/statuses/update.json
+2021-08-03 20:50:33,103:DEBUG:Signing: signature base string: POST&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fupdate.json&oauth_consumer_key%3DsV6Qpbhw7tlU9O1Ft5dcuaKlW%26oauth_nonce%3D122358228344510180601627995033%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1627995033%26oauth_token%3D849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr%26oauth_version%3D1.0%26status%3DSkynet%2520tookover%2520again%2521
+2021-08-03 20:50:33,103:DEBUG:Signature: qT7pp9qgTzqE83sAkgcGsa7GMuw=
+2021-08-03 20:50:33,103:DEBUG:Updated url: https://api.twitter.com/1.1/statuses/update.json?status=Skynet+tookover+again%21
+2021-08-03 20:50:33,103:DEBUG:Updated headers: {'Host': 'api.twitter.com', 'Content-Length': '0', 'Authorization': 'OAuth oauth_nonce="122358228344510180601627995033", oauth_timestamp="1627995033", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="sV6Qpbhw7tlU9O1Ft5dcuaKlW", oauth_token="849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr", oauth_signature="qT7pp9qgTzqE83sAkgcGsa7GMuw%3D"'}
+2021-08-03 20:50:33,103:DEBUG:Updated body: None
+2021-08-03 20:50:33,104:DEBUG:Starting new HTTPS connection (1): api.twitter.com:443
+2021-08-03 20:50:33,628:DEBUG:https://api.twitter.com:443 "POST /1.1/statuses/update.json?status=Skynet+tookover+again%21 HTTP/1.1" 200 2223
+2021-08-03 20:50:33,630:DEBUG:Running for the first time
+2021-08-03 20:50:33,630:DEBUG:Updating praying time
+2021-08-03 20:50:33,630:DEBUG:Deleting *all* jobs
+2021-08-03 20:50:33,632:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:50:34,183:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=PHG02 HTTP/1.1" 200 521
+2021-08-03 20:50:34,185:DEBUG:Fetched data succesfully
+2021-08-03 20:50:54,302:DEBUG:PARAMS: {'status': b'Skynet tookover again!'}
+2021-08-03 20:50:54,303:DEBUG:Signing request <PreparedRequest [POST]> using client <Client client_key=sV6Qpbhw7tlU9O1Ft5dcuaKlW, client_secret=****, resource_owner_key=849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr, resource_owner_secret=****, signature_method=HMAC-SHA1, signature_type=AUTH_HEADER, callback_uri=None, rsa_key=None, verifier=None, realm=None, encoding=utf-8, decoding=None, nonce=None, timestamp=None>
+2021-08-03 20:50:54,303:DEBUG:Including body in call to sign: False
+2021-08-03 20:50:54,303:DEBUG:Collected params: [('status', 'Skynet tookover again!'), ('oauth_nonce', '141655369295360355281627995054'), ('oauth_timestamp', '1627995054'), ('oauth_version', '1.0'), ('oauth_signature_method', 'HMAC-SHA1'), ('oauth_consumer_key', 'sV6Qpbhw7tlU9O1Ft5dcuaKlW'), ('oauth_token', '849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr')]
+2021-08-03 20:50:54,303:DEBUG:Normalized params: oauth_consumer_key=sV6Qpbhw7tlU9O1Ft5dcuaKlW&oauth_nonce=141655369295360355281627995054&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1627995054&oauth_token=849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr&oauth_version=1.0&status=Skynet%20tookover%20again%21
+2021-08-03 20:50:54,303:DEBUG:Normalized URI: https://api.twitter.com/1.1/statuses/update.json
+2021-08-03 20:50:54,303:DEBUG:Signing: signature base string: POST&https%3A%2F%2Fapi.twitter.com%2F1.1%2Fstatuses%2Fupdate.json&oauth_consumer_key%3DsV6Qpbhw7tlU9O1Ft5dcuaKlW%26oauth_nonce%3D141655369295360355281627995054%26oauth_signature_method%3DHMAC-SHA1%26oauth_timestamp%3D1627995054%26oauth_token%3D849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr%26oauth_version%3D1.0%26status%3DSkynet%2520tookover%2520again%2521
+2021-08-03 20:50:54,304:DEBUG:Signature: mz9a2s8Ut7L6rkSwsjSfx7/bqHE=
+2021-08-03 20:50:54,304:DEBUG:Updated url: https://api.twitter.com/1.1/statuses/update.json?status=Skynet+tookover+again%21
+2021-08-03 20:50:54,304:DEBUG:Updated headers: {'Host': 'api.twitter.com', 'Content-Length': '0', 'Authorization': 'OAuth oauth_nonce="141655369295360355281627995054", oauth_timestamp="1627995054", oauth_version="1.0", oauth_signature_method="HMAC-SHA1", oauth_consumer_key="sV6Qpbhw7tlU9O1Ft5dcuaKlW", oauth_token="849953065595584513-jYw7Iwzwvkbe7fAfq1Zwu4PGzETIMvr", oauth_signature="mz9a2s8Ut7L6rkSwsjSfx7%2FbqHE%3D"'}
+2021-08-03 20:50:54,304:DEBUG:Updated body: None
+2021-08-03 20:50:54,304:DEBUG:Starting new HTTPS connection (1): api.twitter.com:443
+2021-08-03 20:50:54,737:DEBUG:https://api.twitter.com:443 "POST /1.1/statuses/update.json?status=Skynet+tookover+again%21 HTTP/1.1" 403 60
+2021-08-03 20:51:28,333:DEBUG:Running for the first time
+2021-08-03 20:51:28,333:DEBUG:Updating praying time
+2021-08-03 20:51:28,333:DEBUG:Deleting *all* jobs
+2021-08-03 20:51:28,336:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:51:28,617:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 20:51:28,620:DEBUG:Fetched data succesfully
+2021-08-03 20:51:57,369:DEBUG:Running for the first time
+2021-08-03 20:51:57,369:DEBUG:Updating praying time
+2021-08-03 20:51:57,370:DEBUG:Deleting *all* jobs
+2021-08-03 20:51:57,372:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:51:57,766:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 20:51:57,767:DEBUG:Fetched data succesfully
+2021-08-03 20:52:15,631:DEBUG:Running for the first time
+2021-08-03 20:52:15,631:DEBUG:Updating praying time
+2021-08-03 20:52:15,631:DEBUG:Deleting *all* jobs
+2021-08-03 20:52:15,633:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:52:16,095:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 20:52:16,096:DEBUG:Fetched data succesfully
+2021-08-03 20:52:23,094:DEBUG:Running for the first time
+2021-08-03 20:52:23,094:DEBUG:Updating praying time
+2021-08-03 20:52:23,094:DEBUG:Deleting *all* jobs
+2021-08-03 20:52:23,096:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:52:23,582:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 20:52:23,585:DEBUG:Fetched data succesfully
+2021-08-03 20:54:38,436:DEBUG:Running for the first time
+2021-08-03 20:54:38,436:DEBUG:Updating praying time
+2021-08-03 20:54:38,436:DEBUG:Deleting *all* jobs
+2021-08-03 20:54:38,438:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:54:38,793:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 20:54:38,796:DEBUG:Fetched data succesfully
+2021-08-03 20:54:47,253:DEBUG:Running for the first time
+2021-08-03 20:54:47,253:DEBUG:Updating praying time
+2021-08-03 20:54:47,253:DEBUG:Deleting *all* jobs
+2021-08-03 20:54:47,255:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:54:47,867:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 20:54:47,869:ERROR:Error at fetching dictionary
+Traceback (most recent call last):
+  File "d:\Python\Project\Twitter_Azan\main.py", line 31, in update_prayer
+    raise Exception('Dictionary returns empty')
+Exception: Dictionary returns empty
+2021-08-03 20:55:32,582:DEBUG:Running for the first time
+2021-08-03 20:55:32,582:DEBUG:Updating praying time
+2021-08-03 20:55:32,582:DEBUG:Deleting *all* jobs
+2021-08-03 20:55:32,584:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:55:33,131:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 20:55:33,133:ERROR:Error at fetching dictionary
+Traceback (most recent call last):
+  File "d:\Python\Project\Twitter_Azan\main.py", line 31, in update_prayer
+    raise ValueError('Dictionary returns empty')
+ValueError: Dictionary returns empty
+2021-08-03 20:55:58,827:DEBUG:Running for the first time
+2021-08-03 20:55:58,827:DEBUG:Updating praying time
+2021-08-03 20:55:58,827:DEBUG:Deleting *all* jobs
+2021-08-03 20:55:58,830:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 20:55:59,313:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 20:55:59,314:DEBUG:Fetched data succesfully
+2021-08-03 21:02:45,127:DEBUG:Running for the first time
+2021-08-03 21:02:45,127:DEBUG:Updating praying time
+2021-08-03 21:02:45,127:DEBUG:Deleting *all* jobs
+2021-08-03 21:02:45,129:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:02:45,593:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:02:45,595:DEBUG:Fetched data succesfully
+2021-08-03 21:02:55,507:DEBUG:Running for the first time
+2021-08-03 21:02:55,507:DEBUG:Updating praying time
+2021-08-03 21:02:55,508:DEBUG:Deleting *all* jobs
+2021-08-03 21:02:55,510:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:02:55,956:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:02:55,958:ERROR:Error at fetching dictionary
+Traceback (most recent call last):
+  File "d:\Python\Project\Twitter_Azan\main.py", line 31, in update_prayer
+    raise ValueError('Dictionary returns empty')
+ValueError: Dictionary returns empty
+2021-08-03 21:05:26,774:DEBUG:Running for the first time
+2021-08-03 21:05:26,774:DEBUG:Updating praying time
+2021-08-03 21:05:26,774:DEBUG:Deleting *all* jobs
+2021-08-03 21:05:26,776:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:05:27,109:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:05:27,110:ERROR:Error at fetching dictionary
+Traceback (most recent call last):
+  File "d:\Python\Project\Twitter_Azan\main.py", line 31, in update_prayer
+    raise Exception('Dictionary returns empty')
+Exception: Dictionary returns empty
+2021-08-03 21:05:37,413:DEBUG:Running for the first time
+2021-08-03 21:05:37,413:DEBUG:Updating praying time
+2021-08-03 21:05:37,413:DEBUG:Deleting *all* jobs
+2021-08-03 21:05:37,415:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:05:37,660:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 511
+2021-08-03 21:05:37,663:DEBUG:Fetched data succesfully
+2021-08-03 21:06:17,920:DEBUG:Running for the first time
+2021-08-03 21:06:17,921:DEBUG:Updating praying time
+2021-08-03 21:06:17,921:DEBUG:Deleting *all* jobs
+2021-08-03 21:06:17,923:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:06:18,433:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:06:18,435:DEBUG:Fetched data succesfully
+2021-08-03 21:07:23,668:DEBUG:Running for the first time
+2021-08-03 21:07:23,668:DEBUG:Updating praying time
+2021-08-03 21:07:23,668:DEBUG:Deleting *all* jobs
+2021-08-03 21:07:23,671:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:07:24,136:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:07:24,138:DEBUG:Fetched data succesfully
+2021-08-03 21:08:11,571:DEBUG:Running for the first time
+2021-08-03 21:08:11,571:DEBUG:Updating praying time
+2021-08-03 21:08:11,571:DEBUG:Deleting *all* jobs
+2021-08-03 21:08:11,574:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:08:12,080:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:08:12,083:DEBUG:Fetched data succesfully
+2021-08-03 21:08:18,358:DEBUG:Running for the first time
+2021-08-03 21:08:18,358:DEBUG:Updating praying time
+2021-08-03 21:08:18,358:DEBUG:Deleting *all* jobs
+2021-08-03 21:08:18,360:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:08:18,923:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01w HTTP/1.1" 200 20
+2021-08-03 21:08:43,469:DEBUG:Running for the first time
+2021-08-03 21:08:43,469:DEBUG:Updating praying time
+2021-08-03 21:08:43,469:DEBUG:Deleting *all* jobs
+2021-08-03 21:08:43,471:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:08:44,029:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01w HTTP/1.1" 200 0
+2021-08-03 21:08:55,979:DEBUG:Running for the first time
+2021-08-03 21:08:55,979:DEBUG:Updating praying time
+2021-08-03 21:08:55,979:DEBUG:Deleting *all* jobs
+2021-08-03 21:08:55,981:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:08:57,013:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:08:57,016:DEBUG:Fetched data succesfully
+2021-08-03 21:09:43,465:DEBUG:Running for the first time
+2021-08-03 21:09:43,465:DEBUG:Updating praying time
+2021-08-03 21:09:43,465:DEBUG:Deleting *all* jobs
+2021-08-03 21:09:43,467:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:09:43,944:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 512
+2021-08-03 21:09:43,947:DEBUG:Fetched data succesfully
+2021-08-03 21:10:06,337:DEBUG:Running for the first time
+2021-08-03 21:10:06,337:DEBUG:Updating praying time
+2021-08-03 21:10:06,337:DEBUG:Deleting *all* jobs
+2021-08-03 21:10:06,339:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:10:06,953:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:10:06,954:CRITICAL:Dictionary returns empty
+2021-08-03 21:12:47,292:DEBUG:Running for the first time
+2021-08-03 21:12:47,292:DEBUG:Updating praying time
+2021-08-03 21:12:47,292:DEBUG:Deleting *all* jobs
+2021-08-03 21:12:47,294:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:12:47,655:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 20
+2021-08-03 21:12:47,657:ERROR:Dictionary returns empty
+2021-08-03 21:13:03,686:DEBUG:Running for the first time
+2021-08-03 21:13:03,686:DEBUG:Updating praying time
+2021-08-03 21:13:03,686:DEBUG:Deleting *all* jobs
+2021-08-03 21:13:03,688:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:13:04,151:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:13:04,153:ERROR:Dictionary returns empty
+2021-08-03 21:13:32,730:DEBUG:Running for the first time
+2021-08-03 21:13:32,730:DEBUG:Updating praying time
+2021-08-03 21:13:32,730:DEBUG:Deleting *all* jobs
+2021-08-03 21:13:32,732:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:13:33,239:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:13:33,240:ERROR:Dictionary returns empty
+2021-08-03 21:13:45,751:DEBUG:Running for the first time
+2021-08-03 21:13:45,751:DEBUG:Updating praying time
+2021-08-03 21:13:45,751:DEBUG:Deleting *all* jobs
+2021-08-03 21:13:45,754:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:13:46,225:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:13:46,226:ERROR:Dictionary returns empty
+2021-08-03 21:15:21,951:DEBUG:Running for the first time
+2021-08-03 21:15:21,951:DEBUG:Updating praying time
+2021-08-03 21:15:21,951:DEBUG:Deleting *all* jobs
+2021-08-03 21:15:21,953:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:15:22,212:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01s HTTP/1.1" 200 0
+2021-08-03 21:15:22,213:ERROR:Dictionary returns empty
+2021-08-03 21:15:33,084:DEBUG:Running for the first time
+2021-08-03 21:15:33,084:DEBUG:Updating praying time
+2021-08-03 21:15:33,084:DEBUG:Deleting *all* jobs
+2021-08-03 21:15:33,086:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:15:33,650:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 512
+2021-08-03 21:15:33,653:DEBUG:Fetched data succesfully
+2021-08-03 21:24:09,693:DEBUG:Running for the first time
+2021-08-03 21:24:09,693:DEBUG:Updating praying time
+2021-08-03 21:24:09,693:DEBUG:Deleting *all* jobs
+2021-08-03 21:24:09,696:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:24:10,473:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:24:10,475:DEBUG:Fetched data succesfully
+2021-08-03 21:24:19,347:DEBUG:Running for the first time
+2021-08-03 21:24:19,347:DEBUG:Updating praying time
+2021-08-03 21:24:19,347:DEBUG:Deleting *all* jobs
+2021-08-03 21:24:19,349:DEBUG:Starting new HTTPS connection (1): www.se-solat.gov.my:443
+2021-08-03 21:24:19,400:ERROR:HTTPSConnectionPool(host='www.se-solat.gov.my', port=443): Max retries exceeded with url: /index.php?r=esolatApi/xmlfeed&zon=WLY01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000019A4BF21D90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2021-08-03 21:24:34,411:DEBUG:Starting new HTTPS connection (1): www.se-solat.gov.my:443
+2021-08-03 21:24:34,414:ERROR:HTTPSConnectionPool(host='www.se-solat.gov.my', port=443): Max retries exceeded with url: /index.php?r=esolatApi/xmlfeed&zon=WLY01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000019A4BF21FD0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2021-08-03 21:25:02,194:DEBUG:Running for the first time
+2021-08-03 21:25:02,194:DEBUG:Updating praying time
+2021-08-03 21:25:02,194:DEBUG:Deleting *all* jobs
+2021-08-03 21:25:02,196:DEBUG:Starting new HTTPS connection (1): www.se-solat.gov.my:443
+2021-08-03 21:25:02,201:ERROR:HTTPSConnectionPool(host='www.se-solat.gov.my', port=443): Max retries exceeded with url: /index.php?r=esolatApi/xmlfeed&zon=WLY01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000024AC1A32A00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2021-08-03 21:25:21,085:DEBUG:Running for the first time
+2021-08-03 21:25:21,086:DEBUG:Updating praying time
+2021-08-03 21:25:21,086:DEBUG:Deleting *all* jobs
+2021-08-03 21:25:21,088:DEBUG:Starting new HTTPS connection (1): www.se-solat.gov.my:443
+2021-08-03 21:25:21,092:ERROR:HTTPSConnectionPool(host='www.se-solat.gov.my', port=443): Max retries exceeded with url: /index.php?r=esolatApi/xmlfeed&zon=WLY01 (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000021F5C402970>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2021-08-03 21:25:37,374:DEBUG:Running for the first time
+2021-08-03 21:25:37,374:DEBUG:Updating praying time
+2021-08-03 21:25:37,374:DEBUG:Deleting *all* jobs
+2021-08-03 21:25:37,376:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:25:37,717:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:25:37,719:DEBUG:Fetched data succesfully
+2021-08-03 21:28:52,391:DEBUG:Running for the first time
+2021-08-03 21:28:52,391:DEBUG:Updating praying time
+2021-08-03 21:28:52,391:DEBUG:Deleting *all* jobs
+2021-08-03 21:28:52,393:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:28:52,882:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 513
+2021-08-03 21:28:52,884:DEBUG:Fetched data succesfully
+2021-08-03 21:30:00,130:DEBUG:Running job Job(interval=1, unit=days, do=update_prayer, args=(), kwargs={})
+2021-08-03 21:30:00,130:DEBUG:Updating praying time
+2021-08-03 21:30:00,130:DEBUG:Deleting *all* jobs
+2021-08-03 21:30:00,131:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:30:01,103:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:30:01,105:DEBUG:Fetched data succesfully
+2021-08-03 21:33:38,432:DEBUG:Running for the first time
+2021-08-03 21:34:05,638:DEBUG:Running for the first time
+2021-08-03 21:35:24,873:DEBUG:Running for the first time
+2021-08-03 21:36:16,097:DEBUG:Running for the first time
+2021-08-03 21:39:31,185:DEBUG:Running for the first time
+2021-08-03 21:39:31,185:DEBUG:Updating praying time
+2021-08-03 21:39:31,185:DEBUG:Deleting *all* jobs
+2021-08-03 21:39:31,187:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:39:31,906:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 513
+2021-08-03 21:39:31,909:DEBUG:Fetched data succesfully
+2021-08-03 21:39:44,128:DEBUG:Running for the first time
+2021-08-03 21:39:44,128:DEBUG:Updating praying time
+2021-08-03 21:39:44,128:DEBUG:Deleting *all* jobs
+2021-08-03 21:39:44,130:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:39:45,017:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:39:45,020:DEBUG:Fetched data succesfully
+2021-08-03 21:40:00,070:DEBUG:Running job Job(interval=1, unit=days, do=update_prayer, args=(), kwargs={})
+2021-08-03 21:40:00,070:DEBUG:Updating new prayer time
+2021-08-03 21:40:00,070:DEBUG:Deleting *all* jobs
+2021-08-03 21:40:00,071:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:40:00,357:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:40:00,359:DEBUG:Fetched data succesfully
+2021-08-03 21:40:24,278:DEBUG:Running for the first time
+2021-08-03 21:40:24,278:DEBUG:Updating praying time
+2021-08-03 21:40:24,278:DEBUG:Deleting *all* jobs
+2021-08-03 21:40:24,280:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:40:25,251:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 513
+2021-08-03 21:40:25,253:DEBUG:Fetched data succesfully
+2021-08-03 21:41:00,398:DEBUG:Running job Job(interval=1, unit=days, do=update_prayer, args=(), kwargs={})
+2021-08-03 21:41:00,398:DEBUG:Updating new prayer time
+2021-08-03 21:41:00,398:DEBUG:Deleting *all* jobs
+2021-08-03 21:41:00,399:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:41:01,153:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:41:01,155:DEBUG:Fetched data succesfully
+2021-08-03 21:42:41,018:DEBUG:Running for the first time
+2021-08-03 21:42:41,018:DEBUG:Updating praying time
+2021-08-03 21:42:41,018:DEBUG:Deleting *all* jobs
+2021-08-03 21:42:41,020:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:42:41,450:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:42:41,452:DEBUG:Schedule updated successfully
+2021-08-03 21:43:05,251:DEBUG:Running for the first time
+2021-08-03 21:43:05,251:DEBUG:Updating praying time
+2021-08-03 21:43:05,251:DEBUG:Deleting *all* jobs
+2021-08-03 21:43:05,254:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:43:05,628:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:43:05,631:DEBUG:New schedule updated
+2021-08-03 21:43:29,055:DEBUG:Running for the first time
+2021-08-03 21:43:29,055:DEBUG:Updating praying time
+2021-08-03 21:43:29,055:DEBUG:Deleting *all* jobs
+2021-08-03 21:43:29,058:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:43:29,473:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:43:29,475:DEBUG:New schedule updated
+2021-08-03 21:44:00,703:DEBUG:Running job Job(interval=1, unit=days, do=update_prayer, args=(), kwargs={})
+2021-08-03 21:44:00,703:DEBUG:Updating new prayer time
+2021-08-03 21:44:00,703:DEBUG:Deleting *all* jobs
+2021-08-03 21:44:00,704:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
+2021-08-03 21:44:01,272:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 1747
+2021-08-03 21:44:01,275:DEBUG:New schedule updated

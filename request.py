@@ -1,8 +1,21 @@
-from bs4 import BeautifulSoup
 import requests
+import logging
+from bs4 import BeautifulSoup
+from time import sleep
+
+logging.basicConfig(filename='debug.log', level=logging.DEBUG,
+                    format='%(asctime)s:%(levelname)s:%(message)s')
 
 def fetch_data(url: str):
-    req = requests.get(url)
+    success = False
+    while not success:
+        try:
+            req = requests.get(url)
+            success = True
+        except Exception as e:
+            logging.error(str(e))
+            print('[Error] Unable to reach URL! Waiting 15 secs and re-trying...')
+            sleep(15)
     soup = BeautifulSoup(req.text, 'xml')
     items = soup.find_all('item')
     keys = []
