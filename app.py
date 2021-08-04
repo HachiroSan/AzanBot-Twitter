@@ -29,12 +29,12 @@ def initialize():
     initialize.__code__ = (lambda: None).__code__
 
 
-def notify(prayer, time):
+def notify(prayer):
     if prayer in _notification:
-        print('{} Telah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.'.format(system.get_time(), prayer))
-        logging.debug('Twitter successfully updated!')
+        msg_notify = '{} Telah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.'.format(system.get_time(), prayer)
+        logging.debug(msg_notify)
         try:
-            twitter.api.update_status('{} Telah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.  #PrayerReminder'.format(system.get_time(), prayer))
+            twitter.api.update_status(msg_notify + '  #PrayerReminder')
             # twitter.api.update_status('Telah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.'.format(prayer))
         except Exception as e:
             logging.error('Twitter update failed!')
@@ -70,7 +70,7 @@ def update_prayer():
         raise
         
     for i in dicts:
-        schedule.every().day.at(dicts[i]).do(notify, prayer=i, time=dicts[i])   
+        schedule.every().day.at(dicts[i]).do(notify, prayer=i)   
     
     print('[AzanBot] Scheduler is running')
 
