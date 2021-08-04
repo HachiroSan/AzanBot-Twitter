@@ -728,3 +728,7 @@ Exception: Dictionary returns empty
 2021-08-04 08:18:24,801:DEBUG:Starting new HTTPS connection (1): www.e-solat.gov.my:443
 2021-08-04 08:18:25,268:DEBUG:https://www.e-solat.gov.my:443 "GET /index.php?r=esolatApi/xmlfeed&zon=WLY01 HTTP/1.1" 200 513
 2021-08-04 08:18:25,270:DEBUG:New schedule updated
+2021-08-05 04:08:04,360:DEBUG:[04:08 AM] Telah masuk waktu solat fardu Asar bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.
+2021-08-05 04:08:16,100:DEBUG:[04:08 AM] Telah masuk waktu solat fardu Asar bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.
+2021-08-05 04:08:33,958:DEBUG:[04:08 AM] Telah masuk waktu solat fardu Asar bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.
+2021-08-05 04:09:08,203:DEBUG:[04:09 AM] Telah masuk waktu solat fardu Asar bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.
