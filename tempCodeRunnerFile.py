@@ -1,1 +1,1 @@
-'daily'
+r bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.  #PrayerReminder')

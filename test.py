@@ -1,0 +1,1 @@
+print ('[4:40 AM] Telah masuk waktu solat fardu Asar bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.  #PrayerReminder')

@@ -8,6 +8,7 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG,
 
 def fetch_data(url: str):
     success = False
+    
     while not success:
         try:
             req = requests.get(url)
@@ -16,6 +17,7 @@ def fetch_data(url: str):
             logging.error(str(e))
             print('[Error] Unable to reach URL! Waiting 15 secs and re-trying...')
             sleep(15)
+
     soup = BeautifulSoup(req.text, 'xml')
     items = soup.find_all('item')
     keys = []
