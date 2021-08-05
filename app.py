@@ -9,7 +9,7 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG,
 url = 'https://www.e-solat.gov.my/index.php?r=esolatApi/xmlfeed&zon={}'.format(twitter.zone_code)
 
 _counter = 0     # Log update interval
-_notification = ['Subuh', 'Zohor', 'Asar', 'Maghrib', 'Isyak']  # Default notification, Imsak Syuruk excluded
+_notification = ['Imsak', 'Syuruk', 'Subuh', 'Zohor', 'Asar', 'Maghrib', 'Isyak']  # Default notification, Imsak Syuruk excluded
 
 
 def initialize():
@@ -31,7 +31,10 @@ def initialize():
 
 def notify(prayer):
     if prayer in _notification:
-        msg_notify = '{} Telah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan yang sewaktu dengannya.'.format(system.get_time(), prayer)
+        if prayer in ('Imsak', 'Syuruk'):
+            msg_notify = '{} Telah masuk waktu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan yang sewaktu dengannya.'.format(system.get_time(), prayer)
+        else:
+            msg_notify = '{} Telah masuk waktu solat fardhu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan yang sewaktu dengannya.'.format(system.get_time(), prayer)
         logging.debug(msg_notify)
         try:
             twitter.api.update_status(msg_notify + '  #PrayerReminder')
