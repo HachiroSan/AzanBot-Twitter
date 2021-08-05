@@ -31,7 +31,7 @@ def initialize():
 
 def notify(prayer):
     if prayer in _notification:
-        msg_notify = '{} Telah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan-kawasan yang sewaktu dengannya.'.format(system.get_time(), prayer)
+        msg_notify = '{} Telah masuk waktu solat fardu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan yang sewaktu dengannya.'.format(system.get_time(), prayer)
         logging.debug(msg_notify)
         try:
             twitter.api.update_status(msg_notify + '  #PrayerReminder')
