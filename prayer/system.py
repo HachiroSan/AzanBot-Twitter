@@ -3,6 +3,8 @@ import datetime
 from subprocess import getoutput
 from os import system, name
 
+today = datetime.date.today()
+
 def clear():
   
     # for windows
@@ -29,3 +31,7 @@ def get_timezone():
     
 def get_time():
     return strftime("[%I:%M %p]")
+
+def get_current_date():
+    return today.strftime("%d/%m/%y")
+    

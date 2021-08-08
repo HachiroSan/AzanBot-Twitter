@@ -9,6 +9,7 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG,
 config = ConfigParser()
 config.read("config.ini")
 
+# Fetch data from config file
 consumer_key = config.get('configuration', 'API_KEY')
 consumer_secret = config.get('configuration', 'API_SECRET_KEY')
 access_token_key = config.get('configuration', 'ACCESS_TOKEN_KEY')
@@ -24,5 +25,3 @@ auth.set_access_token(access_token_key, access_token_secret)
 # # calling the api 
 api = tweepy.API(auth)
   
-# # posting the tweet
-# api.update_status("Skynet tookover!")

@@ -7,6 +7,7 @@ logging.basicConfig(filename='debug.log', level=logging.DEBUG,
                     format='%(asctime)s:%(levelname)s:%(message)s')
 
 def fetch_data(url: str):
+    """ Get xml data from url       """
     success = False
     
     while not success:
@@ -35,6 +36,9 @@ def fetch_data(url: str):
             time = i.text.split(":", 2)
             values.append("{}:{}".format(time[0], time[1]))   # Append to values list
 
-    return dict(zip(keys, values)) 
+    return dict(zip(keys, values))  #   Convert to dictionary model 
 
 
+""" 
+{'Imsak': '05:46', 'Subuh': '05:56', 'Syuruk': '07:07', 'Zohor': '13:16', 'Asar': '16:35', 'Maghrib': '19:22', 'Isyak': '20:34'} 
+"""
