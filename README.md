@@ -11,7 +11,7 @@
     ·
     <a href="#Usage">Usage</a>
     ·
-    <a href="#Operating System">Operating System</a>
+    <a href="#Operating-System">Operating System</a>
   </p>
 </p>
 
