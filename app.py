@@ -109,7 +109,7 @@ def update_prayer():
 
     # Minus 5 minutes from Fajr Prayer
     daily_schedule = datetime.strptime(
-        dicts['Subuh'], '%H:%M') - timedelta(hours=0, minutes=5)
+        dicts['Imsak'], '%H:%M') - timedelta(hours=0, minutes=5)
     schedule.every().day.at(daily_schedule.strftime('%H:%M')).do(notify, prayer='schedule',
                                                                  schedule=dicts)  # Send prayer schedule of the day 5 minutes before Fajr/Subuh
 

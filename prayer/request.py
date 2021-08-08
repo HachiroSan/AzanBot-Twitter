@@ -42,5 +42,6 @@ def fetch_data(url: str):
 
 
 """ 
+Sample
 {'Imsak': '05:46', 'Subuh': '05:56', 'Syuruk': '07:07', 'Zohor': '13:16', 'Asar': '16:35', 'Maghrib': '19:22', 'Isyak': '20:34'} 
 """
