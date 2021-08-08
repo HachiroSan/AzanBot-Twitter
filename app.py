@@ -36,8 +36,18 @@ def notify(prayer, schedule={}):
     """ Send notification to terminal and twitter   """ 
 
     if prayer == 'schedule':
-        msg_notify = 'Jadual waktu solat {} : Imsak ({}), Subuh ({}), Syuruk ({}), Zohor ({}), Asar ({}), Maghrib ({}), Isyak ({}).'.format(system.get_current_date(), schedule['Imsak'], schedule['Subuh'], schedule['Syuruk'], schedule['Zohor'], schedule['Asar'], schedule['Maghrib'], schedule['Isyak'])
+        msg_notify = ( 'Jadual waktu solat {} : Imsak ({}), Subuh ({}), Syuruk ({}), Zohor ({}), Asar ({}), Maghrib ({}), Isyak ({}).'
+        .format(system.get_current_date(), 
+        system.convert_12hrs(schedule['Imsak']), 
+        system.convert_12hrs(schedule['Subuh']), 
+        system.convert_12hrs(schedule['Syuruk']), 
+        system.convert_12hrs(schedule['Zohor']), 
+        system.convert_12hrs(schedule['Asar']), 
+        system.convert_12hrs(schedule['Maghrib']), 
+        system.convert_12hrs(schedule['Isyak'])) )
+
         logging.debug(msg_notify)
+
         try:
             # # posting the tweet
             twitter.api.update_status(msg_notify)
