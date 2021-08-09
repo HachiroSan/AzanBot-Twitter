@@ -1,4 +1,7 @@
 <!-- PROJECT LOGO -->
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)<br>
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/subahanii/COVID19-tracker/issues)
 <br />
 <p align="center">
     <a href="https://github.com/HachiroSan/AzanBot-Twitter">
@@ -20,8 +23,13 @@
 
 
 ## Installation
+1. Clone the repository
 
-Please install the required package from requirements.txt before proceeding.
+```bash
+git clone https://github.com/HachiroSan/AzanBot-Twitter.git
+```
+
+2. Install the required package from requirements.txt using pip before proceeding.
 
 ```bash
 pip install -r requirements.txt
