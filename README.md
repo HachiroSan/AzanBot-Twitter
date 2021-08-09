@@ -40,8 +40,9 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-1. Update your Twitter APIs in config.ini 
-2. Specify the prayer zone, refer to zone code below
+1. Open config.ini 
+2. Update Twitter APIs (Default is just random string)
+3. Specify the prayer zone, refer to zone code below
 ```python
 # JOHOR
 JHR01 - PULAU AUR DAN PULAU PEMANGGIL
