@@ -7,7 +7,7 @@
   <h3 align="center">AzanBot-Twitter</h3>
 
   <p align="center">
-    AzanBot is a Malaysia Islamic prayer alert bot for Twitter. It's a simple script based on Python 3.
+    AzanBot is a Malaysia Islamic prayer alert bot for Twitter. It's a simple script based on Python 3. Data source from Jabatan Kemajuan Islam Malaysia. 
     <br />
     <br />
     <a href="#Installation">Installation</a>
