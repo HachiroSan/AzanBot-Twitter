@@ -73,7 +73,7 @@ def notify(prayer, schedule={}):
 
         try:
             # # posting the tweet
-            twitter.api.update_status(msg_notify + '  #PrayerReminder')
+            twitter.api.update_status(msg_notify + '  #WaktuSolat')
         except Exception as e:
             logging.error('Twitter update failed!')
 
