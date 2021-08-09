@@ -104,7 +104,7 @@ SWK09 - ZON KHAS (KAMPUNG PATARIKAN)
 WLY01 - KUALA LUMPUR, PUTRAJAYA
 WLY02 - LABUAN
 ```
-3. Run app.py
+3. Run script
 ```python
 python app.py
 or
