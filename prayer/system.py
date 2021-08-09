@@ -3,7 +3,7 @@ import datetime
 from subprocess import getoutput
 from os import system, name
 
-today = datetime.date.today()
+
 
 
 def clear():
@@ -38,6 +38,7 @@ def get_time():
 
 def get_current_date():
     """ get current date """
+    today = datetime.date.today()
     return today.strftime("%d/%m/%y")
 
 
