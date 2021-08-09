@@ -13,6 +13,8 @@
     AzanBot is a Malaysia-based Islamic prayer alert bot for Twitter. It's a simple script based on Python 3. Data source from Jabatan Kemajuan Islam Malaysia. 
     <br />
     <br />
+    <a href="https://twitter.com/dailyprayerKTN">Demo</a>
+    ·
     <a href="#Installation">Installation</a>
     ·
     <a href="#Usage">Usage</a>
@@ -38,9 +40,9 @@ pip install -r requirements.txt
 ```
 
 ## Usage
-1. Update your Twitter APIs in config.ini 
-2. Specify the prayer zone, refer to zone code below
-3. Run app.py
+1. Open config.ini 
+2. Update Twitter APIs (Default is just random string)
+3. Specify the prayer zone, refer to zone code below
 ```python
 # JOHOR
 JHR01 - PULAU AUR DAN PULAU PEMANGGIL
@@ -101,6 +103,12 @@ SWK09 - ZON KHAS (KAMPUNG PATARIKAN)
 # WILAYAH PERSEKUTUAN
 WLY01 - KUALA LUMPUR, PUTRAJAYA
 WLY02 - LABUAN
+```
+3. Run script
+```python
+python app.py
+or
+python3 app.py
 ```
 ## Operating System
 Application works for both Linux and Windows. (Tested on Ubuntu 20.04 and Windows 10 21H1)
