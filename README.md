@@ -42,7 +42,6 @@ pip install -r requirements.txt
 ## Usage
 1. Update your Twitter APIs in config.ini 
 2. Specify the prayer zone, refer to zone code below
-3. Run app.py
 ```python
 # JOHOR
 JHR01 - PULAU AUR DAN PULAU PEMANGGIL
@@ -103,6 +102,12 @@ SWK09 - ZON KHAS (KAMPUNG PATARIKAN)
 # WILAYAH PERSEKUTUAN
 WLY01 - KUALA LUMPUR, PUTRAJAYA
 WLY02 - LABUAN
+```
+3. Run app.py
+```python
+python app.py
+or
+python3 app.py
 ```
 ## Operating System
 Application works for both Linux and Windows. (Tested on Ubuntu 20.04 and Windows 10 21H1)
