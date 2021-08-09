@@ -1,4 +1,7 @@
 <!-- PROJECT LOGO -->
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)<br>
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/subahanii/COVID19-tracker/issues)
 <br />
 <p align="center">
     <a href="https://github.com/HachiroSan/AzanBot-Twitter">
@@ -7,7 +10,7 @@
   <h3 align="center">AzanBot-Twitter</h3>
 
   <p align="center">
-    AzanBot is a Malaysia Islamic prayer alert bot for Twitter. It's a simple script based on Python 3.9.
+    AzanBot is a Malaysia-based Islamic prayer alert bot for Twitter. It's a simple script based on Python 3. Data source from Jabatan Kemajuan Islam Malaysia. 
     <br />
     <br />
     <a href="#Installation">Installation</a>
@@ -20,8 +23,15 @@
 
 
 ## Installation
+You need to have Python 3. (Project developed on Python 3.9.2)
 
-Please install the required package from requirements.txt before proceeding.
+1. Clone the repository
+
+```bash
+git clone https://github.com/HachiroSan/AzanBot-Twitter.git
+```
+
+2. Install the required package from requirements.txt using pip before proceeding.
 
 ```bash
 pip install -r requirements.txt
