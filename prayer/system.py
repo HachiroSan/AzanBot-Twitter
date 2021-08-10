@@ -38,8 +38,7 @@ def get_time():
 
 def get_current_date():
     """ get current date """
-    today = datetime.date.today()
-    return today.strftime("%d/%m/%y")
+    return datetime.date.today().strftime("%d/%m/%y")
 
 
 def convert_12hrs(hrs_24):
