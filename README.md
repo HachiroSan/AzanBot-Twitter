@@ -24,7 +24,7 @@
 </p>
 
 ## Prerequisite
-1. You need to set your system time to local timezone.
+You need to set your system time to local timezone.
 
 ## Installation
 You need to have Python 3. (Project developed on Python 3.9.2)
