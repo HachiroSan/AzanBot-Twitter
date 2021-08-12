@@ -2,19 +2,22 @@ import tweepy
 from configparser import ConfigParser
 import logging
 
-logging.basicConfig(filename='debug.log', level=logging.DEBUG,
-                    format='%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(
+    filename="debug.log",
+    level=logging.DEBUG,
+    format="%(asctime)s:%(levelname)s:%(message)s",
+)
 
 # instantiate
 config = ConfigParser()
 config.read("config.ini")
 
 # Fetch data from config file
-consumer_key = config.get('configuration', 'API_KEY')
-consumer_secret = config.get('configuration', 'API_SECRET_KEY')
-access_token_key = config.get('configuration', 'ACCESS_TOKEN_KEY')
-access_token_secret = config.get('configuration', 'ACCESS_TOKEN_SECRET')
-zone_code = config.get('timezone', 'ZONE')
+consumer_key = config.get("configuration", "API_KEY")
+consumer_secret = config.get("configuration", "API_SECRET_KEY")
+access_token_key = config.get("configuration", "ACCESS_TOKEN_KEY")
+access_token_secret = config.get("configuration", "ACCESS_TOKEN_SECRET")
+zone_code = config.get("timezone", "ZONE")
 
 # # authorization of consumer key and consumer secret
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
