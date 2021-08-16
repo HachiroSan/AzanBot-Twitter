@@ -46,13 +46,13 @@ def update_prayer():
     if _counter == 0:  # if first time running
         print("[AzanBot] Updating praying time")
         logging.debug("Updating praying time")
+        print("[AzanBot] Scheduler is running")
     else:
         print("{} Updating new prayer time".format(system.get_timedate("[%d-%m-%Y][%I:%M %p]")))
         logging.debug("Updating new prayer time")
     _counter += 1
 
     create_job()
-    print("[AzanBot] Scheduler is running")
 
 
 def create_job():
@@ -72,16 +72,19 @@ def create_job():
         logging.error(str(e))
         raise
 
-    send_time = (
-        datetime.strptime(dicts["Imsak"], "%H:%M")
-        - timedelta(hours=0, minutes=5)  # Get time to send jadual solat
-    ).strftime("%H:%M")
+    # send_time = (
+    #     datetime.strptime(dicts["Imsak"], "%H:%M")
+    #     - timedelta(hours=0, minutes=5)  # Get time to send jadual solat
+    # ).strftime("%H:%M")
 
-    schedule.every().day.at(send_time).do(
-        create_jadual_solat, schedule=dicts, date=obj.get_date()
-    )
+    # schedule.every().day.at(send_time).do(
+    #     create_jadual_solat, schedule=dicts, date=obj.get_date()
+    # )
 
     for i in dicts:
+        if i == 'Imsak':
+            schedule.every().day.at(dicts[i]).do(create_jadual_solat, schedule=dicts, date=obj.get_date())
+            continue
         schedule.every().day.at(dicts[i]).do(create_solat, prayer=i)
 
 
@@ -110,7 +113,7 @@ def create_solat(prayer):
         else:
             addin = prayer
 
-    msg = "{} Telah masuk waktu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan yang sewaktu dengannya.".format(
+    msg = "{} Telah masuk waktu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan yang sewaktu dengannya.\n#WaktuSolat".format(
         system.get_timedate('[%I:%M %p]'), addin
     )
 
