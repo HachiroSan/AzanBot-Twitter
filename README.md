@@ -24,7 +24,7 @@
 </p>
 
 ## Installation
-You need to set your system time to GMT +8 timezone **IMPORTANT**.
+You need to set your system time to GMT +8 timezone (**IMPORTANT**).
 ```bash
 sudo timedatectl set-timezone Asia/Kuala_Lumpur
 ```
