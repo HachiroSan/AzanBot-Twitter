@@ -72,15 +72,6 @@ def create_job():
         logging.error(str(e))
         raise
 
-    # send_time = (
-    #     datetime.strptime(dicts["Imsak"], "%H:%M")
-    #     - timedelta(hours=0, minutes=5)  # Get time to send jadual solat
-    # ).strftime("%H:%M")
-
-    # schedule.every().day.at(send_time).do(
-    #     create_jadual_solat, schedule=dicts, date=obj.get_date()
-    # )
-
     for i in dicts:
         if i == 'Imsak':
             schedule.every().day.at(dicts[i]).do(create_jadual_solat, schedule=dicts, date=obj.get_date())
