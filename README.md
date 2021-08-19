@@ -43,7 +43,7 @@ pip install -r requirements.txt
 1. Open config.ini 
 2. Update Twitter APIs (Default is just random string)
 3. Specify the prayer zone, refer to zone code below
-```
+```python
 # JOHOR
 JHR01 - PULAU AUR DAN PULAU PEMANGGIL
 JHR02 - JOHOR BAHRU, KOTA TINGGI, MERSING
@@ -107,9 +107,9 @@ WLY02 - LABUAN
 
 4. Edit notification message to your liking. Refer formatting given below
 ```
-    timestamp_12hr = 12-hours timestamp e.g 8:30 PM
-    timestamp_24hr = 24-hours timestamp e.g 20:30
-    prayer = current prayer
+timestamp_12hr = 12-hours timestamp e.g 8:30 PM
+timestamp_24hr = 24-hours timestamp e.g 20:30
+prayer = current prayer
 ``` 
 3. Run script
 ```
