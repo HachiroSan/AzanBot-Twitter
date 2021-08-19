@@ -113,9 +113,8 @@ def create_solat(prayer):
         else:
             addin = prayer
 
-    msg = "{} Telah masuk waktu {} bagi kawasan Kuantan, Pekan, Rompin dan Muadzam Shah serta kawasan yang sewaktu dengannya.\n#WaktuSolat".format(
-        system.get_timedate('[%I:%M %p]'), addin
-    )
+    custom_msg = twitter.msg
+    msg = custom_msg.format(timestamp_12hr=system.get_timedate('%I:%M %p'), timestamp_24hr=system.get_timedate('%H:%M'), prayer=addin)
 
     send_tweet(msg)
 

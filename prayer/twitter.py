@@ -18,6 +18,7 @@ consumer_secret = config.get("configuration", "API_SECRET_KEY")
 access_token_key = config.get("configuration", "ACCESS_TOKEN_KEY")
 access_token_secret = config.get("configuration", "ACCESS_TOKEN_SECRET")
 zone_code = config.get("timezone", "ZONE")
+msg = config.get("notification", "MESSAGE")
 
 # # authorization of consumer key and consumer secret
 auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
