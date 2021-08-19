@@ -25,7 +25,9 @@
 
 ## Installation
 You need to set your system time to GMT +8 timezone (script use system time to work).
-
+'''bash
+sudo timedatectl set-timezone Asia/Kuala_Lumpur
+'''
 You also need to have Python 3. (Project developed on Python 3.9.2)
 
 1. Clone the repository
