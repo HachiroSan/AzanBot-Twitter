@@ -24,7 +24,7 @@
 </p>
 
 ## Installation
-You need to set your system time to local timezone (script will be using system time to work).
+You need to set your system time to GMT +8 timezone (script use system time to work).
 You also need to have Python 3. (Project developed on Python 3.9.2)
 
 1. Clone the repository
@@ -104,6 +104,13 @@ SWK09 - ZON KHAS (KAMPUNG PATARIKAN)
 WLY01 - KUALA LUMPUR, PUTRAJAYA
 WLY02 - LABUAN
 ```
+
+4. Edit notification message to your liking. Refer formatting given below
+```python
+    timestamp_12hr = 12-hours timestamp e.g 8:30 PM
+    timestamp_24hr = 24-hours timestamp e.g 20:30
+    prayer = current prayer
+``` 
 3. Run script
 ```python
 python app.py
