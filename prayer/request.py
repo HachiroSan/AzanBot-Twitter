@@ -1,17 +1,20 @@
-import twitter 
 import requests
 import logging
 from datetime import datetime, date
 from bs4 import BeautifulSoup
 from time import sleep
 import csv 
-
+from configparser import ConfigParser
 
 logging.basicConfig(
     filename="debug.log",
     level=logging.DEBUG,
     format="%(asctime)s:%(levelname)s:%(message)s",
 )
+
+config = ConfigParser()
+config.read("config.ini")
+zone_code = config.get("timezone", "ZONE")
 
 class fetch:
     def __init__(self, url=None):
@@ -46,7 +49,7 @@ def get_csv():
             csv_reader = csv.DictReader(csv_file)
 
             for row in csv_reader:
-                if row["Zon"] == twitter.zone_code:
+                if row["Zon"] == zone_code:
                     date_col = datetime.strptime(row["Tarikh"], '%d/%m/%Y').strftime('%d/%m/%Y')
                     if date_col == today.strftime('%d/%m/%Y'):
                         for i in keys:
