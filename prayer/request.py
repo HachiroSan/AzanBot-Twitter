@@ -1,4 +1,4 @@
-from prayer import twitter 
+import twitter 
 import requests
 import logging
 from datetime import datetime, date
@@ -68,7 +68,7 @@ def get_xml(url):
             sleep(15)
 
     soup = BeautifulSoup(req.text, "xml")
-
+    print(soup.prettify())
     keys = []
     values = []
 
