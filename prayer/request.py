@@ -68,7 +68,7 @@ def get_xml(url):
             sleep(15)
 
     soup = BeautifulSoup(req.text, "xml")
-    print(soup.prettify())
+
     keys = []
     values = []
 
