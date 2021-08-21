@@ -54,6 +54,8 @@ def get_csv():
                     if date_col == today.strftime('%d/%m/%Y'):
                         for i in keys:
                             values.append(datetime.strptime(row[i], '%H:%M:%S').strftime('%H:%M'))
+    except IOError as e:
+        logging.debug(str(e))
     except Exception as e:
         logging.error(str(e))
 
