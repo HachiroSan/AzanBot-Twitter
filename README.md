@@ -135,16 +135,14 @@ WLY01 - KUALA LUMPUR, PUTRAJAYA
 WLY02 - LABUAN
 ```
 
-4. Edit notification message to your liking. Refer formatting given below
+4. Edit notification message to your liking using python formatting. Refer string variable given below
 ```
-timestamp_12hr = 12-hours timestamp e.g 8:30 PM
-timestamp_24hr = 24-hours timestamp e.g 20:30
-prayer = current prayer
+{timestamp_12hr} = 12-hours timestamp e.g 8:30 PM
+{timestamp_24hr} = 24-hours timestamp e.g 20:30
+{prayer} = current prayer
 ``` 
 3. Run script
 ```
-python app.py
-or
 python3 app.py
 ```
 ## Operating System
