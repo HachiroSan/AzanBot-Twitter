@@ -61,20 +61,11 @@ def create_job():
     schedule.every().day.at("00:01").do(update_prayer)
 
     obj = fetch(url)
-
-    try:
-        dicts = obj.get_schedule()
-        if not dicts:
-            raise Exception("Dictionary returns empty")
-
-        logging.debug("New schedule updated")
-    except Exception as e:
-        logging.error(str(e))
-        raise
+    dicts = obj.get_schedule()
 
     for i in dicts:
         if i == 'Imsak':
-            schedule.every().day.at(dicts[i]).do(create_jadual_solat, schedule=dicts, date=obj.get_date())
+            schedule.every().day.at(dicts[i]).do(create_jadual_solat, schedule=dicts, date=system.get_timedate("%d/%m/%Y"))
             continue
         schedule.every().day.at(dicts[i]).do(create_solat, prayer=i)
 
