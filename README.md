@@ -2,6 +2,7 @@
 [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)<br>
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/subahanii/COVID19-tracker/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br />
 <p align="center">
     <a href="https://github.com/HachiroSan/AzanBot-V2">
@@ -19,18 +20,15 @@
     <a href="#Installation">Installation</a>
     ·
     <a href="#Usage">Usage</a>
-    ·
-    <a href="#Operating-System">Operating System</a>
   </p>
 </p>
 
 ## Features
 
+- Notify Azan for Imsak, Subuh, Syuruk, Zohor, Asar, Maghrib, Isyak in twitter by timezone.
 - The schedule will now be updated every day at 12:01 AM to ensure the most accurate and up-to-date prayer times.
 
 - Implemented a new API to enhance the reliability and precision of the schedule."
-
-- New cli commands that is far more easier to run
 
 - New user interface utilized using Rich libray.
 
@@ -46,7 +44,7 @@
 1. Clone the repository
 
 ```bash
-git clone https://github.com/Muhd-Farhad/AzanBot-V2.git
+git clone https://github.com/Muhd-Farhad/AzanBot-Twitter/
 ```
 
 2. Install the required package from requirements.txt using pip before proceeding.
@@ -57,12 +55,17 @@ pip install -r requirements.txt
 
 ## Usage
 1. Open config.ini 
-2. Update Twitter APIs (Default for reference)
+2. Update Twitter APIs (Default value for your references)
 3. Run cli.py. You can either specify city. state or timezone
+```
+python3 cli.py -t [state/city/zone]
+```
+such as
 
-```
-python3 cli.py -t Kuantan
-```
+	```
+	python3 cli.py -t Kuantan
+	```
+	
 For the zone, refer to zone code below
 
 ```python
@@ -152,6 +155,15 @@ TRG04 - DUNGUN, KEMAMAN
 WLY01 - KUALA LUMPUR, PUTRAJAYA
 WLY02 - LABUAN
 ```
+#### Libraries used
+
+|  Library | Source  |
+| ------------ | ------------ |
+|  Tweepy  |  https://pypi.org/project/tweepy/ |
+|  APScheduler | https://pypi.org/project/APScheduler/  |
+|  Rich |  https://github.com/Textualize/rich |
+|  Pytz | https://pypi.org/project/pytz/  |
+|  Pandas |  https://pandas.pydata.org/|
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -162,5 +174,8 @@ Please make sure to update tests as appropriate.
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
 
 ## Credits
-Waktu Solat API - https://github.com/zaimramlan/waktu-solat-api
-JAKIM E-Solat 
+
+|  Credits |   Link |
+| ------------ | ------------ |
+|  JAKIM E-Solat  |  https://www.e-solat.gov.my/ |
+| Waktu Solat API |https://github.com/zaimramlan/waktu-solat-api 
