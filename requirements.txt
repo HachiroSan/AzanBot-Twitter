@@ -1,5 +1,8 @@
-requests==2.25.1
-tweepy==3.10.0
-schedule==1.1.0
-beautifulsoup4==4.9.3
-lxml==4.9.1
+APScheduler==3.9.1.post1
+colorama==0.4.6
+rich==13.0.0
+pytz==2022.7
+tweepy==4.12.1
+pandas==1.5.2
+requests==2.28.1
+
