@@ -28,13 +28,14 @@
 
 - The schedule will now be updated every day at 12:01 AM to ensure the most accurate and up-to-date prayer times.
 
-- We have also implemented a new API to enhance the reliability and precision of the schedule. Enjoy the updated feature and let us know your feedback."
+- Implemented a new API to enhance the reliability and precision of the schedule."
 
 - New cli commands that is far more easier to run
 
 - New user interface utilized using Rich libray.
 
 - Now, there is no need to change system timezone into Malaysia timezone.
+
 
 <p align="center">
 <img src="/img/terminal-preview.png" alt="Logo" width="800" height="400">
