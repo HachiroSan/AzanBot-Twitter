@@ -5,7 +5,7 @@
 <br />
 <p align="center">
     <a href="https://github.com/HachiroSan/AzanBot-V2">
-    <img src="logo.png" alt="Logo" width="80" height="80">
+    <img src="/img/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">AzanBot-V2</h3>
 
@@ -23,6 +23,21 @@
     <a href="#Operating-System">Operating System</a>
   </p>
 </p>
+
+## Features
+
+- The schedule will now be updated every day at 12:01 AM to ensure the most accurate and up-to-date prayer times.
+
+- We have also implemented a new API to enhance the reliability and precision of the schedule. Enjoy the updated feature and let us know your feedback."
+
+- New cli commands that is far more easier to run
+
+- New user interface utilized using Rich libray.
+
+- Now, there is no need to change system timezone into Malaysia timezone.
+
+<img src="/img/terminal-preview.png" alt="Logo" width="80" height="80">
+
 
 ## Installation
 
@@ -139,10 +154,10 @@ WLY02 - LABUAN
 ## Operating System
 Application works for both Linux and Windows. (Tested on Ubuntu 20.04 and Windows 10 21H1)
 
-For Linux, if you want to host multiple bots, use tmux or screen for better management. 
+For Linux server, use tmux or screen for better management. 
 
 ## Troubleshoot
-All activities will be logged in debug.log file. If there is any error. Feel free to contact me by providing me the log or try to troubleshoot yourself.
+All activities will be logged in logs.txt file. If there is any error. Feel free to contact me by providing me the log or try to troubleshoot yourself.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -153,5 +168,5 @@ Please make sure to update tests as appropriate.
 [GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
 
 ## Credits
-Waktu Solat API https://github.com/zaimramlan/waktu-solat-api
+Waktu Solat API - https://github.com/zaimramlan/waktu-solat-api
 JAKIM E-Solat 
