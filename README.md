@@ -28,7 +28,7 @@
 
 - The schedule will now be updated every day at 12:01 AM to ensure the most accurate and up-to-date prayer times.
 
-- We have also implemented a new API to enhance the reliability and precision of the schedule. Enjoy the updated feature and let us know your feedback."
+- Implemented a new API to enhance the reliability and precision of the schedule."
 
 - New cli commands that is far more easier to run
 
@@ -36,8 +36,10 @@
 
 - Now, there is no need to change system timezone into Malaysia timezone.
 
-<img src="/img/terminal-preview.png" alt="Logo" width="80" height="80">
 
+<p align="center">
+<img src="/img/terminal-preview.png" alt="Logo" width="800" height="400">
+</p>
 
 ## Installation
 
@@ -155,9 +157,6 @@ WLY02 - LABUAN
 Application works for both Linux and Windows. (Tested on Ubuntu 20.04 and Windows 10 21H1)
 
 For Linux server, use tmux or screen for better management. 
-
-## Troubleshoot
-All activities will be logged in logs.txt file. If there is any error. Feel free to contact me by providing me the log or try to troubleshoot yourself.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
