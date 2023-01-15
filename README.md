@@ -153,11 +153,6 @@ WLY01 - KUALA LUMPUR, PUTRAJAYA
 WLY02 - LABUAN
 ```
 
-## Operating System
-Application works for both Linux and Windows. (Tested on Ubuntu 20.04 and Windows 10 21H1)
-
-For Linux server, use tmux or screen for better management. 
-
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
