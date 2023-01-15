@@ -37,7 +37,7 @@
 - Now, there is no need to change system timezone into Malaysia timezone.
 
 <p align="center">
-<img src="/img/terminal-preview.png" alt="Logo" width="400" height="300">
+<img src="/img/terminal-preview.png" alt="Logo" width="600" height="400">
 </p>
 
 ## Installation
