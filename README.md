@@ -158,9 +158,6 @@ Application works for both Linux and Windows. (Tested on Ubuntu 20.04 and Window
 
 For Linux server, use tmux or screen for better management. 
 
-## Troubleshoot
-All activities will be logged in logs.txt file. If there is any error. Feel free to contact me by providing me the log or try to troubleshoot yourself.
-
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
