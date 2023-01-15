@@ -25,7 +25,6 @@
 </p>
 
 ## Installation
-You need to have Python 3.10. (Project developed on Python 3.9.2)
 
 1. Clone the repository
 
