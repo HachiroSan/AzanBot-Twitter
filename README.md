@@ -55,16 +55,18 @@ pip install -r requirements.txt
 
 ## Usage
 1. Open config.ini 
+
 2. Update Twitter APIs (Default value for your references)
+
 3. Run cli.py. You can either specify city. state or timezone
 ```
 python3 cli.py -t [state/city/zone]
 ```
-such as
+as such
 
-	```
-	python3 cli.py -t Kuantan
-	```
+```
+python3 cli.py -t Kuantan
+```
 	
 For the zone, refer to zone code below
 
@@ -171,7 +173,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## License
-[GNU GPLv3](https://choosealicense.com/licenses/gpl-3.0/)
+[MIT ](https://spdx.org/licenses/MIT.html/)
 
 ## Credits
 
