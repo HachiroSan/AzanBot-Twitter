@@ -8,7 +8,7 @@
     <a href="https://github.com/HachiroSan/AzanBot-Twitter">
     <img src="/img/logo.png" alt="Logo" width="80" height="80">
   </a>
-  <h3 align="center">AzanBot-V2</h3>
+  <h3 align="center">AzanBot-Twitter</h3>
 
   <p align="center">
     AzanBot is a Malaysia-based Islamic prayer alert bot for Twitter. 
