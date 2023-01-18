@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 <br />
 <p align="center">
-    <a href="https://github.com/HachiroSan/AzanBot-V2">
+    <a href="https://github.com/HachiroSan/AzanBot-Twitter">
     <img src="/img/logo.png" alt="Logo" width="80" height="80">
   </a>
   <h3 align="center">AzanBot-V2</h3>
