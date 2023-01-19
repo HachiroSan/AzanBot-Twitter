@@ -37,7 +37,12 @@ class AzanBot:
 
         # Schedule task to run at 12:01 AM every day
         self.scheduler.add_job(
-            self.update_schedule, "cron", hour="00", minute="01", second="0"
+            self.update_schedule,
+            "cron",
+            hour="00",
+            minute="01",
+            second="0",
+            timezone=timezone,
         )
 
     def get_data(self):
@@ -53,6 +58,7 @@ class AzanBot:
             run_date = datetime.datetime.now(timezone).replace(
                 hour=time.hour, minute=time.minute
             )
+            # Add azan job
             self.scheduler.add_job(
                 post_tweet,
                 "date",
