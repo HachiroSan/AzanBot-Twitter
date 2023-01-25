@@ -2,6 +2,7 @@ import json
 import os
 from collections import deque
 import datetime
+from pytz import timezone
 
 
 class LogContainer:
@@ -12,13 +13,14 @@ class LogContainer:
     def add_log(self, log):
         try:
             # Get the current time
-            now = datetime.datetime.now()
+            now = datetime.datetime.now(timezone("Asia/Kuala_Lumpur"))
 
             # Format the timestamp as year, month, day, hour, minute, and second
             timestamp = now.strftime("[%Y-%m-%d %H:%M:%S]")
             self.logs.append((timestamp, log))
             with open(self.file, "a") as f:
                 f.write(f"{timestamp}: {log}\n")
+                f.close()
         except Exception as e:
             print(f"Error adding log: {e}")
 

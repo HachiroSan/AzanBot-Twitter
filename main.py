@@ -40,8 +40,8 @@ class AzanBot:
             self.update_schedule,
             "cron",
             hour="00",
-            minute="01",
-            second="0",
+            minute="05",
+            second="0",m
             timezone=timezone,
         )
 
@@ -71,6 +71,12 @@ class AzanBot:
                 + " at "
                 + time.strftime("%H:%M")
             )
+
+
+    def update_schedule(self):
+        self.get_data()
+        self.create_cron()
+        self.logscontainer.add_log("Updated new schedule")
 
     def Info_Panel(self):
         screen_name = self.tweety.get_username()
@@ -219,10 +225,6 @@ class AzanBot:
         layout["footer"].update(Align(self.Footer_Panel(), "center", vertical="middle"))
         return layout
 
-    def update_schedule(self):
-        self.get_data()
-        self.create_cron()
-        self.logscontainer.add_log("Updated new schedule")
 
     def run_job(self, job):
         if job == 0:
@@ -251,7 +253,7 @@ class AzanBot:
                 time.sleep(1)
 
         with Live(
-            self.generate_dashboard(), refresh_per_second=30
+            self.generate_dashboard(), refresh_per_second=4
         ) as live:  # update 4 times a second to feel the fluid
             while True:
                 live.update(self.generate_dashboard())
