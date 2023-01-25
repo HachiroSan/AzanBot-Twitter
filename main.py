@@ -35,13 +35,13 @@ class AzanBot:
         # Flag to check if the run() method has been run
         self.has_been_run = False
 
-        # Schedule task to run at 12:01 AM every day
+        # Schedule task to run at 12:05 AM every day
         self.scheduler.add_job(
             self.update_schedule,
             "cron",
-            hour="00",
-            minute="05",
-            second="0",m
+            hour="0",
+            minute="5",
+            second="0",
             timezone=timezone,
         )
 
