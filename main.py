@@ -19,6 +19,7 @@ from rich.align import Align
 from rich.text import Text
 from rich.style import Style
 from log import LogContainer
+import gc
 
 # Set timezone to Malaysia
 timezone = pytz.timezone("Asia/Kuala_Lumpur")
@@ -74,6 +75,7 @@ class AzanBot:
 
 
     def update_schedule(self):
+        gc.collect()
         self.get_data()
         self.create_cron()
         self.logscontainer.add_log("Updated new schedule")
@@ -176,6 +178,7 @@ class AzanBot:
         return text
 
     def generate_dashboard(self):
+        gc.collect()
         layout = Layout()
         # Divide the "screen" in to three parts
         layout.split_column(
