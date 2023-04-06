@@ -4,3 +4,7 @@ prayer/__pycache__/
 test.py
 tempCodeRunnerFile.py
 prayer/test.py/
+.venv/
+.vscode/
+.dependencygraph/
+log.txt

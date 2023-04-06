@@ -1,0 +1,9 @@
+# Twitter API credentials
+API_KEY = "eCQ3QVOCvRKN74NnwO5xqfeL3"
+API_SECRET_KEY = "oDqNRYbmQ2SHPYM0hcuMHUdmd1RC4i12nmuMj5uAHVmFIq5nFC"
+ACCESS_TOKEN = "849953065595584513-2GFURYrZKASyHunziU5c7wLYQrBEU37"
+ACCESS_TOKEN_SECRET = "hyjUQBbovcDuMLqQRFMmKZcQUoViEdKh4y3PRhRfD4lxe"
+
+# Other configuration parameters
+TIMEZONE = "Asia/Kuala_Lumpur"
+ZONE = "PHG02"

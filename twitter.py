@@ -1,15 +1,5 @@
 import tweepy
-import configparser
-
-# Read the INI file
-config = configparser.ConfigParser()
-config.read("config.ini")
-
-# Replace with INI file keys
-consumer_key = config["configuration"]["API_KEY"]
-consumer_secret = config["configuration"]["API_SECRET_KEY"]
-access_token = config["configuration"]["ACCESS_TOKEN_KEY"]
-access_token_secret = config["configuration"]["ACCESS_TOKEN_SECRET"]
+from config import API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 
 
 class Tweety:
@@ -21,13 +11,11 @@ class Tweety:
     def authenticate(self):
         # Authenticate to Twitter
         auth = tweepy.OAuth1UserHandler(
-            consumer_key, consumer_secret, access_token, access_token_secret
+            API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
         )
         self.api = tweepy.API(auth)
         self.me = self.api.verify_credentials()
         self.get_username()
-
-
 
     def get_username(self):
         return self.me.screen_name
@@ -49,3 +37,11 @@ class Tweety:
 
     def get_status_count(self):
         return str(self.me.statuses_count)
+
+    def post_tweet(self, text):
+        try:
+            self.api.update_status(text)
+            return True
+        except tweepy.TweepError as e:
+            print(f"Error posting tweet: {e}")
+            return False
