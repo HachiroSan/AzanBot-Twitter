@@ -4,10 +4,16 @@ A Twitter bot notifier for azan in Malaysia, using data from Jabatan Kemajuan Ag
 
 ## Features
 
-- User need to specify their own Twitter API key inside `config.py`.
-- Users can specify daerah or state zone inside `config.py`.
+- Displays prayer schedule for the day in Imsak notification.
+- Each azan notification message will include the next prayer time.
+- Can specify custom hashtags (inside main.py)
 - All logs will be stored inside a log file.
 - No need to set local timezone of the host.
+
+## Prerequisite
+
+- User need to specify their own Twitter API key inside `config.py`.
+- Users need to specify daerah or state zone inside `config.py`.
 
 ## Usage
 
@@ -17,7 +23,7 @@ To use the AzanBot-Twitter, follow these steps:
 2. Install the required packages using `pip install -r requirements.txt`.
 3. Set up your Twitter API key inside `config.py`.
 4. Specify the daerah or state zone inside `config.py`.
-5. Run `python azanbot.py` to start the bot.
+5. Run `python run.py` to start the bot.
 
 ## Future Plans
 
@@ -46,16 +52,12 @@ Contributions to AzanBot-Twitter are always welcome! To contribute, follow these
 **A:** The bot refreshes for azan times every day at 12:05 AM
 
 **Q:** How do I get Twitter API key?
-To get Twitter API keys, you need to create a Twitter Developer Account and then create a Twitter App. Here are the steps to follow:
 
-**A:** Go to https://developer.twitter.com/en/apps and sign in to your Twitter account.
-Click the "Create an app" button.
-Fill out the application details (name, description, website, etc.).
-Agree to the Twitter Developer Agreement and click "Create".
-Once your app is created, click on the "Keys and Tokens" tab.
-Generate your consumer key and consumer secret, then generate your access token and access token secret.
+
+**A:** To get Twitter API keys, you need to create a Twitter Developer Account and then create a Twitter App. From there you can grab the API key
 
 **Q:** How do I know what code for specific timezone?
+
 **A:** Can refer to https://www.e-solat.gov.my/. For example for KL, I will specify WLY01 under ZONE inside config.py
 ## License
 
