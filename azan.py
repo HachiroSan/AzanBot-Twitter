@@ -53,6 +53,19 @@ class AzanFetcher:
                 "isha": prayer["isha"][:-3],
             }
 
+        english_to_malay = {
+            "Monday": "Isnin",
+            "Tuesday": "Selasa",
+            "Wednesday": "Rabu",
+            "Thursday": "Khamis",
+            "Friday": "Jumaat",
+            "Saturday": "Sabtu",
+            "Sunday": "Ahad",
+        }
+
+        # Convert the day from English to Malay
+        azan_time["day"] = english_to_malay[azan_time["day"]]
+
         return azan_time
 
     def get_next_azan_time(self):
