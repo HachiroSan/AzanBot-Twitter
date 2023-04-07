@@ -23,7 +23,7 @@ To use the AzanBot-Twitter, follow these steps:
 2. Install the required packages using `pip install -r requirements.txt`.
 3. Set up your Twitter API key inside `config.py`.
 4. Specify the daerah or state zone inside `config.py`.
-5. Run `python azanbot.py` to start the bot.
+5. Run `python run.py` to start the bot.
 
 ## Future Plans
 
