@@ -36,13 +36,13 @@ class AzanBot:
 
         HASHTAG = "#WaktuSolat #RamadanKareem"
         message = {
-            "imsak": f"Telah masuk waktu Imsak ({AzanSchedule['imsak']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu solat pada hari ini. Imsak ({AzanSchedule['imsak']}), Subuh ({AzanSchedule['fajr']}), Syuruk ({AzanSchedule['syuruk']}), Zohor ({AzanSchedule['dhuhr']}), Asar ({AzanSchedule['asr']}), Maghrib ({AzanSchedule['maghrib']}), Isyak({AzanSchedule['isha']}). \n{HASHTAG}",
-            "fajr": f"Telah masuk waktu solat fardhu Subuh ({AzanSchedule['fajr']}) bagi kawasan Kuantan dan kawasan yang sewaktu dengannya. Waktu seterusnya adalah Syuruk ({AzanSchedule['syuruk']}). {HASHTAG}",
+            "imsak": f"Telah masuk waktu Imsak ({AzanSchedule['imsak']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu solat pada hari ini ({AzanSchedule['day']} {AzanSchedule['date']}) - Imsak ({AzanSchedule['imsak']}), Subuh ({AzanSchedule['fajr']}), Syuruk ({AzanSchedule['syuruk']}), Zohor ({AzanSchedule['dhuhr']}), Asar ({AzanSchedule['asr']}), Maghrib ({AzanSchedule['maghrib']}), Isyak ({AzanSchedule['isha']}). \n{HASHTAG}",
+            "fajr": f"Telah masuk waktu solat fardhu Subuh ({AzanSchedule['fajr']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Syuruk ({AzanSchedule['syuruk']}). {HASHTAG}",
             "syuruk": f"Telah masuk waktu Syuruk ({AzanSchedule['syuruk']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Zohor ({AzanSchedule['dhuhr']}). {HASHTAG}",
             "dhuhr": f"Telah masuk waktu solat fardhu Zohor ({AzanSchedule['dhuhr']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Asar ({AzanSchedule['asr']}). {HASHTAG}",
-            "asr": f"Telah masuk waktu solat fardhu Asar ({AzanSchedule['asr']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Syuruk ({AzanSchedule['maghrib']}). {HASHTAG}",
+            "asr": f"Telah masuk waktu solat fardhu Asar ({AzanSchedule['asr']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Maghrib ({AzanSchedule['maghrib']}). {HASHTAG}",
             "maghrib": f"Telah masuk waktu solat fardhu Maghrib ({AzanSchedule['maghrib']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Isyak ({AzanSchedule['isha']}). {HASHTAG}",
-            "isha": f"Telah masuk waktu solat fardhu Isyak ({AzanSchedule['isha']}) bagi kawasan Kuantan dan kawasan yang sewaktu dengannya. {HASHTAG}",
+            "isha": f"Telah masuk waktu solat fardhu Isyak ({AzanSchedule['isha']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. {HASHTAG}",
         }
 
         current_time = datetime.now(tz).time()
@@ -74,7 +74,7 @@ class AzanBot:
                 timezone=tz,
             )
             printl(
-                f"{prayer_name} time at {time.strftime('%H:%M')} has been scheduled."
+                f"{prayer_name} time at ({time.strftime('%H:%M')}) has been scheduled."
             )
 
         # Schedule refresh_daily() to run at 12:05 AM
