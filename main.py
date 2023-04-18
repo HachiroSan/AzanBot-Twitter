@@ -36,7 +36,10 @@ class AzanBot:
 
         HASHTAG = "#WaktuSolat #RamadanKareem"
         message = {
-            "imsak": f"Telah masuk waktu Imsak ({AzanSchedule['imsak']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya.\n\nJadual solat pada hari ini ({AzanSchedule['day']} {AzanSchedule['date']}) - Imsak ({AzanSchedule['imsak']}), Subuh ({AzanSchedule['fajr']}), Syuruk ({AzanSchedule['syuruk']}), Zohor ({AzanSchedule['dhuhr']}), Asar ({AzanSchedule['asr']}), Maghrib ({AzanSchedule['maghrib']}), Isyak ({AzanSchedule['isha']}). \n{HASHTAG}",
+            # Jadual solat
+            "jadual": f"Jadual solat pd hari ini, {AzanSchedule['day']} {AzanSchedule['date']} | {AzanSchedule['hijri']}. Imsak ({AzanSchedule['imsak']}), Subuh ({AzanSchedule['fajr']}), Syuruk ({AzanSchedule['syuruk']}), Zohor ({AzanSchedule['dhuhr']}), Asar ({AzanSchedule['asr']}), Maghrib ({AzanSchedule['maghrib']}), Isyak ({AzanSchedule['isha']}). {HASHTAG}\n",
+            # Prayer time
+            "imsak": f"Telah masuk waktu Imsak ({AzanSchedule['imsak']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Subuh ({AzanSchedule['fajr']}). {HASHTAG}",
             "fajr": f"Telah masuk waktu solat fardhu Subuh ({AzanSchedule['fajr']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Syuruk ({AzanSchedule['syuruk']}). {HASHTAG}",
             "syuruk": f"Telah masuk waktu Syuruk ({AzanSchedule['syuruk']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Zohor ({AzanSchedule['dhuhr']}). {HASHTAG}",
             "dhuhr": f"Telah masuk waktu solat fardhu Zohor ({AzanSchedule['dhuhr']}) bagi kawasan Kuantan dan kawasan sewaktu dengannya. Waktu seterusnya adalah Asar ({AzanSchedule['asr']}). {HASHTAG}",

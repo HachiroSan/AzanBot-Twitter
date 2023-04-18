@@ -1,6 +1,6 @@
 import requests
 from config import TIMEZONE, ZONE
-from datetime import datetime
+from datetime import datetime, timedelta
 from utils import printl, tz
 
 
@@ -40,8 +40,41 @@ class AzanFetcher:
 
         # Loop through the prayer time data and store it in the dictionary
         for prayer in data["prayerTime"]:
+
+            # Convert the data from integer date to string date in hijri
+            hijri_year, hijri_month, hijri_day = prayer["hijri"].split("-")
+            hijri_month_name = {
+                "01": "Muharram",
+                "02": "Safar",
+                "03": "Rabiul Awal",
+                "04": "Rabiul Akhir",
+                "05": "Jumadil Awal",
+                "06": "Jumadil Akhir",
+                "07": "Rajab",
+                "08": "Syaban",
+                "09": "Ramadan",
+                "10": "Syawal",
+                "11": "Zulhijjah",
+                "12": "Muharram"
+            }[hijri_month]
+            prayer["hijri"] = f"{hijri_day} {hijri_month_name} {hijri_year}"
+
+            # Create a dictionary to convert the day from English to Malay
+            english_to_malay = {
+                "Monday": "Isnin",
+                "Tuesday": "Selasa",
+                "Wednesday": "Rabu",
+                "Thursday": "Khamis",
+                "Friday": "Jumaat",
+                "Saturday": "Sabtu",
+                "Sunday": "Ahad",
+            }
+            # Convert the day from English to Malay
+            prayer["day"] = english_to_malay[prayer["day"]]
+
             azan_time = {
-                "date": prayer["date"],
+                "jadual": (datetime.strptime(prayer['imsak'][:-3], '%H:%M') - timedelta(minutes=10)).strftime('%H:%M'), # We will post the jadual during 10 minutes before imsak time
+                "date": datetime.strptime(prayer["date"], '%d-%b-%Y').strftime('%d %B %Y'), # Convert from string to datetime object and then to string again
                 "hijri": prayer["hijri"],
                 "day": prayer["day"],
                 "imsak": prayer["imsak"][:-3],  # remove trailing second
@@ -52,19 +85,6 @@ class AzanFetcher:
                 "maghrib": prayer["maghrib"][:-3],
                 "isha": prayer["isha"][:-3],
             }
-
-        english_to_malay = {
-            "Monday": "Isnin",
-            "Tuesday": "Selasa",
-            "Wednesday": "Rabu",
-            "Thursday": "Khamis",
-            "Friday": "Jumaat",
-            "Saturday": "Sabtu",
-            "Sunday": "Ahad",
-        }
-
-        # Convert the day from English to Malay
-        azan_time["day"] = english_to_malay[azan_time["day"]]
 
         return azan_time
 
