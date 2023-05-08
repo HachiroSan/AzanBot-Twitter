@@ -9,7 +9,7 @@ A Twitter bot notifier for azan in Malaysia, using data from Jabatan Kemajuan Ag
 - Can specify custom hashtags (inside main.py)
 - All logs will be stored inside a log file.
 - No need to set local timezone of the host.
-
+- See it in action @ https://twitter.com/dailyprayerKTN
 ## Prerequisite
 
 - User need to specify their own Twitter API key inside `config.py`.
