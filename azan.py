@@ -17,7 +17,7 @@ class AzanFetcher:
     def get_response(self):
         # Make a GET request to the API
         try:
-            response = requests.get(self.url)
+            response = requests.get(self.url, verify=False)
             response.raise_for_status()  # raise exception if HTTP response is not 200 OK
         except requests.exceptions.HTTPError as http_err:
             printl(f"HTTP error occurred: {http_err}", hidden=True)

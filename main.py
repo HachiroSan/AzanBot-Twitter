@@ -34,7 +34,7 @@ class AzanBot:
         self.Azan.refresh()
         AzanSchedule = self.Azan.AzanSchedule
 
-        HASHTAG = "#WaktuSolat #RamadanKareem"
+        HASHTAG = "#WaktuSolat"
         message = {
             # Jadual solat
             "jadual": f"Jadual solat pd hari ini, {AzanSchedule['day']} {AzanSchedule['date']} | {AzanSchedule['hijri']}. Imsak ({AzanSchedule['imsak']}), Subuh ({AzanSchedule['fajr']}), Syuruk ({AzanSchedule['syuruk']}), Zohor ({AzanSchedule['dhuhr']}), Asar ({AzanSchedule['asr']}), Maghrib ({AzanSchedule['maghrib']}), Isyak ({AzanSchedule['isha']}). {HASHTAG}\n",
