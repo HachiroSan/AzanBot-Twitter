@@ -51,11 +51,11 @@ class AzanFetcher:
                 "05": "Jumadil Awal",
                 "06": "Jumadil Akhir",
                 "07": "Rajab",
-                "08": "Syaban",
+                "08": "Syaaban",
                 "09": "Ramadan",
                 "10": "Syawal",
-                "11": "Zulhijjah",
-                "12": "Muharram"
+                "11": "Zulkaedah",
+                "12": "Zulhijjah"
             }[hijri_month]
             prayer["hijri"] = f"{hijri_day} {hijri_month_name} {hijri_year}"
 
