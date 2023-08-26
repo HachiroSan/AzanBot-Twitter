@@ -1,4 +1,4 @@
-from twitter import Tweety
+from twitter import TwitterPoster
 from scheduler import Scheduler
 from azan import AzanFetcher
 from utils import printl, tz
@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 class AzanBot:
     def __init__(self):
         # Initiate class
-        self.Tweety = Tweety()
+        self.Tweety = TwitterPoster()
         self.Scheduler = Scheduler()
         self.Azan = AzanFetcher()
 

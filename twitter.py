@@ -1,47 +1,75 @@
-import tweepy
+from requests_oauthlib import OAuth1Session
+import os
 from config import API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
 
-
-class Tweety:
-    """Establish connection to twitter account based on configuration file keys"""
-
+class TwitterPoster:
     def __init__(self):
-        self.authenticate()
-
-    def authenticate(self):
-        # Authenticate to Twitter
-        auth = tweepy.OAuth1UserHandler(
-            API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET
+        self._consumer_key = API_KEY
+        self._consumer_secret = API_SECRET_KEY
+        self.authenticator = TwitterAuthenticator(
+            self._consumer_key, self._consumer_secret
         )
-        self.api = tweepy.API(auth)
-        self.me = self.api.verify_credentials()
-        self.get_username()
+        self.auth = self.authenticator.get_authentication_session()
 
-    def get_username(self):
-        return self.me.screen_name
+    def post_tweet(self, tweet_text):
+        payload = {"text": tweet_text}
 
-    def get_favourites_count(self):
-        return str(self.me.favourites_count)
+        # Making the request
+        response = self.auth.post(
+            "https://api.twitter.com/2/tweets",
+            json=payload,
+        )
 
-    def get_followers_count(self):
-        return str(self.me.followers_count)
+        if response.status_code != 201:
+            raise Exception(
+                f"Request returned an error: {response.status_code} {response.text}"
+            )
 
-    def get_bio(self):
-        return str(self.me.description)
 
-    def get_id(self):
-        return str(self.me.id)
+class TwitterAuthenticator:
+    def __init__(self, consumer_key, consumer_secret):
+        self._consumer_key = consumer_key
+        self._consumer_secret = consumer_secret
 
-    def get_location(self):
-        return str(self.me.location)
+    def get_authentication_session(self):
+        # Get request token
+        request_token_url = "https://api.twitter.com/oauth/request_token?oauth_callback=oob&x_auth_access_type=write"
+        oauth = OAuth1Session(self._consumer_key, client_secret=self._consumer_secret)
 
-    def get_status_count(self):
-        return str(self.me.statuses_count)
-
-    def post_tweet(self, text):
         try:
-            self.api.update_status(text)
-            return True
-        except tweepy.TweepError as e:
-            print(f"Error posting tweet: {e}")
-            return False
+            fetch_response = oauth.fetch_request_token(request_token_url)
+        except ValueError:
+            print(
+                "There may have been an issue with the consumer_key or consumer_secret you entered."
+            )
+
+        resource_owner_key = fetch_response.get("oauth_token")
+        resource_owner_secret = fetch_response.get("oauth_token_secret")
+        print("Got OAuth token:", resource_owner_key)
+
+        # Get authorization
+        base_authorization_url = "https://api.twitter.com/oauth/authorize"
+        authorization_url = oauth.authorization_url(base_authorization_url)
+        print("Please go here and authorize:", authorization_url)
+        verifier = input("Paste the PIN here: ")
+
+        # Get the access token
+        access_token_url = "https://api.twitter.com/oauth/access_token"
+        oauth = OAuth1Session(
+            self._consumer_key,
+            client_secret=self._consumer_secret,
+            resource_owner_key=resource_owner_key,
+            resource_owner_secret=resource_owner_secret,
+            verifier=verifier,
+        )
+        oauth_tokens = oauth.fetch_access_token(access_token_url)
+
+        access_token = oauth_tokens["oauth_token"]
+        access_token_secret = oauth_tokens["oauth_token_secret"]
+
+        return OAuth1Session(
+            self._consumer_key,
+            client_secret=self._consumer_secret,
+            resource_owner_key=access_token,
+            resource_owner_secret=access_token_secret,
+        )
